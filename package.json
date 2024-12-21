@@ -1,0 +1,33 @@
+{
+  "name": "@fehujs/build",
+  "version": "0.1.0",
+  "description": "Fehujs build utility",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fehujs/build.git"
+  },
+  "keywords": [
+    "build"
+  ],
+  "author": "Pascal LLEONART",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fehujs/build/issues"
+  },
+  "homepage": "https://github.com/fehujs/build#readme",
+  "dependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
