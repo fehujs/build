@@ -1,11 +1,11 @@
 const esbuild = require("esbuild")
 const { existsSync, rmSync } = require("node:fs")
-const pkgjson = require("./package.json")
 
 /**
+ * @param {string[]} deps
  * @param {string} mainPath
  */
-function build(mainPath = "./src/index.ts") {
+function build(deps, mainPath = "./src/index.ts") {
     if (existsSync('build'))
         rmSync('build', { recursive: true })
     
@@ -18,7 +18,7 @@ function build(mainPath = "./src/index.ts") {
         format: 'esm',
         sourcemap: true,
         tsconfig: './tsconfig.json',
-        external: pkgjson.dependencies ? Object.keys(pkgjson.dependencies) : [],
+        external: deps ? Object.keys(deps) : [],
     }).catch(() => process.exit(1))
     
 }
