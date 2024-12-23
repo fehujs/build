@@ -5,7 +5,7 @@ const { existsSync, rmSync } = require("node:fs")
  * @param {string} mainPath
  * @param {string} tsconfigPath
  */
-function build(mainPath = "./src/index.ts", tsconfigPath = "../tsconfig.json") {
+function build(mainPath = "./src/index.ts", tsconfigPath = "./tsconfig.json") {
     if (existsSync('build'))
         rmSync('build', { recursive: true })
     
